@@ -46,6 +46,15 @@ println("\(totalNumber) \(merchantName)")
 
 println((totalNumber, merchantName))
 
+var myPower = (pushUps:50, tightening:20, squats:50)
+var myPower1 = (pushUps:45, tightening:30, squats:10)
+
+let mod = { $0 > 0 ? $0 : -1*$0 }
+var a1 = -10
+var difStat = myPower
+difStat.0 = abs(a1)
+
+
 
 
 
