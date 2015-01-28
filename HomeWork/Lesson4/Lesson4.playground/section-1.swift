@@ -7,50 +7,76 @@ let constThree = "a10"
 let constFouth = "99"
 let constFive = "1.0"
 
-var sumIntOpt : Int
+var sumIntOpt = 0
 // Optional binding
-let constOneInt = (constOne.toInt() != nil) ? constOne.toInt()! : 0
-let constTwoInt = (constTwo.toInt() != nil) ? constTwo.toInt()! : 0
-let constThreeInt = (constThree.toInt() != nil) ? constThree.toInt()! : 0
-let constFouthInt = (constFouth.toInt() != nil) ? constFouth.toInt()! : 0
-let constFiveInt = (constFive.toInt() != nil) ? constFive.toInt()! : 0
-sumIntOpt = constOneInt + constTwoInt + constThreeInt + constFouthInt + constFiveInt
+if let constOneInt = constOne.toInt() {
+    sumIntOpt += constOneInt
+}
+if let constTwoInt = constTwo.toInt() {
+    sumIntOpt += constTwoInt
+}
+if let constThreeInt = constThree.toInt() {
+    sumIntOpt += constThreeInt
+}
+if let constFouthInt = constFouth.toInt() {
+    sumIntOpt += constFouthInt
+}
+if let constFiveInt = constFive.toInt() {
+    sumIntOpt += constFiveInt
+}
 
-var sumIntFor : Int = 0
+var sumIntFor = 0
 // Forced unwrapping
-sumIntFor += (constOne.toInt() != nil) ? constOne.toInt()! : 0
-sumIntFor += (constTwo.toInt() != nil) ? constTwo.toInt()! : 0
-sumIntFor += (constThree.toInt() != nil) ? constThree.toInt()! : 0
-sumIntFor += (constFouth.toInt() != nil) ? constFouth.toInt()! : 0
-sumIntFor += (constFive.toInt() != nil) ? constFive.toInt()! : 0
+var temp = constOne.toInt()
+if temp != nil {
+    sumIntFor += temp!
+}
+temp = constTwo.toInt()
+if temp != nil {
+    sumIntFor += temp!
+}
+temp = constThree.toInt()
+if temp != nil {
+    sumIntFor += temp!
+}
+temp = constFouth.toInt()
+if temp != nil {
+    sumIntFor += temp!
+}
+temp = constFive.toInt()
+if temp != nil {
+    sumIntFor += temp!
+}
 
 // Part 2
-var serverResponse:(statusCode: Int, message: String?, errorMessage: String?)
+// If var has type not optional he muss inatilization!
+var serverResponse : (statusCode: Int, message: String?, errorMessage: String?)
 serverResponse.statusCode = 201
 serverResponse.message = "Created"
 serverResponse.errorMessage = nil
-if serverResponse.statusCode >= 200 && serverResponse.statusCode <= 300 {
+
+if serverResponse.statusCode >= 200 && serverResponse.statusCode < 300 {
     println("Message is = \(serverResponse.message!)")
-} else {
+} else if serverResponse.errorMessage != nil {
     println("Error message is = \(serverResponse.errorMessage!)")
 }
 
-var serverResponseNew: (message: String?, errorMessage: String?)
-serverResponseNew.message = nil
+var serverResponseNew : (message: String?, errorMessage: String?)
 serverResponseNew.errorMessage = "Method Not Allowed"
+
 if serverResponseNew.message != nil {
     println("Message is = \(serverResponseNew.message!)")
-} else {
+} else if serverResponseNew.errorMessage != nil {
     println("Error message is = \(serverResponseNew.errorMessage!)")
 }
 
 // Part 3
 println()
-var studentOne: (name: String, numberCar: String?, note: Int?) = ("", nil, nil)
-var studentTwo: (name: String, numberCar: String?, note: Int?) = ("", nil, nil)
-var studentThree: (name: String, numberCar: String?, note: Int?) = ("", nil, nil)
-var studentFour: (name: String, numberCar: String?, note: Int?) = ("", nil, nil)
-var studentFive: (name: String, numberCar: String?, note: Int?) = ("", nil, nil)
+var studentOne : (name: String!, numberCar: String?, note: Int?)
+var studentTwo : (name: String!, numberCar: String?, note: Int?)
+var studentThree : (name: String!, numberCar: String?, note: Int?)
+var studentFour : (name: String!, numberCar: String?, note: Int?)
+var studentFive : (name: String!, numberCar: String?, note: Int?)
 
 studentOne.name = "Alex"
 studentOne.numberCar = "BM 342315 ИТ"
