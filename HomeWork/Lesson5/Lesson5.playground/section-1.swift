@@ -2,21 +2,21 @@
 
 let myBirthday = (day: 22, month: 11, year: 1988)
 
-let January = (days: 31, number: 1)
-let February = (days: 28, number: 2)
-let March = (days: 31, number: 3)
-let April = (days: 30, number: 4)
-let May = (days: 31, number: 5)
-let June = (days: 30, number: 6)
-let July = (days: 31, number: 7)
-let August = (days: 31, number: 8)
-let September = (days: 30, number: 9)
-let October	= (days: 31, number: 10)
-let November = (days: 30, number: 11)
-let December = (days: 31, number: 12)
+let January    = (days: 31, number: 1)
+let February   = (days: 28, number: 2)
+let March      = (days: 31, number: 3)
+let April      = (days: 30, number: 4)
+let May        = (days: 31, number: 5)
+let June       = (days: 30, number: 6)
+let July       = (days: 31, number: 7)
+let August     = (days: 31, number: 8)
+let September  = (days: 30, number: 9)
+let October    = (days: 31, number: 10)
+let November   = (days: 30, number: 11)
+let December   = (days: 31, number: 12)
 
-var leapYear = false
-var countDay = myBirthday.day
+var leapYear   = false
+var countDay   = myBirthday.day
 
 // 1 count seconds
 // leap year ?
@@ -70,19 +70,15 @@ var varF = 91
 
 let sum = ((50 + varA++ + --varB + ++varC + varF++ + varD--) / varB++ + varB) % varC++
 
-//4 
-// two types 1 - (1,3,5,7) 2 - (2,4,6,8)
-let firstType = (1,3,5,7)
-let secondType = (2,4,6,8)
-
+//4
 var point = (x : 1, y : 4)
 
-if (point.x == firstType.0 || point.x == firstType.1 || point.x == firstType.2 || point.x == firstType.3) && (point.y == firstType.0 || point.y == firstType.1 || point.y == firstType.2 || point.y == firstType.3) {
-    println("Color is white")
-} else if (point.x == secondType.0 || point.x == secondType.1 || point.x == secondType.2 || point.x == secondType.3) && (point.y == secondType.0 || point.y == secondType.1 || point.y == secondType.2 || point.y == secondType.3) {
-    println("Color is white")
+if (point.x % 2) == 0 && (point.y % 2) == 0 {
+    println("White")
+} else if (point.x % 2) != 0 && (point.y % 2) != 0 {
+    println("White")
 } else {
-    println("Color is black")
+    println("Black")
 }
 
 
