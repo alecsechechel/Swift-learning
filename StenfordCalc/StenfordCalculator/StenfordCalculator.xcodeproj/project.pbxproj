@@ -13,6 +13,7 @@
 		FAB92B161A7BF8B000FBB289 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB92B151A7BF8B000FBB289 /* Images.xcassets */; };
 		FAB92B191A7BF8B000FBB289 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB92B171A7BF8B000FBB289 /* LaunchScreen.xib */; };
 		FAB92B251A7BF8B000FBB289 /* StenfordCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB92B241A7BF8B000FBB289 /* StenfordCalculatorTests.swift */; };
+		FABA43191A7E2B3E0087C4CF /* CalculationBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA43181A7E2B3E0087C4CF /* CalculationBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		FAB92B1E1A7BF8B000FBB289 /* StenfordCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StenfordCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB92B231A7BF8B000FBB289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB92B241A7BF8B000FBB289 /* StenfordCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StenfordCalculatorTests.swift; sourceTree = "<group>"; };
+		FABA43181A7E2B3E0087C4CF /* CalculationBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculationBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB92B101A7BF8B000FBB289 /* ViewController.swift */,
+				FABA43181A7E2B3E0087C4CF /* CalculationBrain.swift */,
 				FAB92B121A7BF8B000FBB289 /* Main.storyboard */,
 				FAB92B0C1A7BF8B000FBB289 /* Supporting Files */,
 			);
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB92B111A7BF8B000FBB289 /* ViewController.swift in Sources */,
+				FABA43191A7E2B3E0087C4CF /* CalculationBrain.swift in Sources */,
 				FAB92B0F1A7BF8B000FBB289 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +411,7 @@
 				FAB92B2A1A7BF8B000FBB289 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAB92B2B1A7BF8B000FBB289 /* Build configuration list for PBXNativeTarget "StenfordCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				FAB92B2D1A7BF8B000FBB289 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

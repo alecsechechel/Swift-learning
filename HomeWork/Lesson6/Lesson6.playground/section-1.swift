@@ -4,26 +4,26 @@ import UIKit
 // Part 1
 // a ?? b  =  a != nil ? a! : b
 
-let str1 : String? = "10"
-let str2 : String? = nil
-let str3 : String? = "8"
-let str4 : String? = nil
-let str5 : String? = "17"
+let str1 = "10"
+let str2 = "1ww"
+let str3 = "8"
+let str4 = "one"
+let str5 = "17"
 
-var newStr1 = str1 ?? "0"
-var newStr2 = str2 ?? "0"
-var newStr3 = str3 ?? "0"
-var newStr4 = str4 ?? "0"
-var newStr5 = str5 ?? "0"
+var newIntStr1 = str1.toInt() ?? 0
+var newIntStr2 = str2.toInt() ?? 0
+var newIntStr3 = str3.toInt() ?? 0
+var newIntStr4 = str4.toInt() ?? 0
+var newIntStr5 = str5.toInt() ?? 0
 
 var sumStr = 0
-sumStr = newStr1.toInt()! + newStr2.toInt()! + newStr3.toInt()! + newStr4.toInt()! + newStr5.toInt()!
+sumStr = newIntStr1 + newIntStr2 + newIntStr3 + newIntStr4 + newIntStr5
 
-newStr1 = newStr1 == "0" ? "nil" : newStr1
-newStr2 = newStr2 == "0" ? "nil" : newStr2
-newStr3 = newStr3 == "0" ? "nil" : newStr3
-newStr4 = newStr4 == "0" ? "nil" : newStr4
-newStr5 = newStr5 == "0" ? "nil" : newStr5
+let newStr1 = (str1.toInt() == nil) ? "nil" : str1
+let newStr2 = (str2.toInt() == nil) ? "nil" : str2
+let newStr3 = (str3.toInt() == nil) ? "nil" : str3
+let newStr4 = (str4.toInt() == nil) ? "nil" : str4
+let newStr5 = (str5.toInt() == nil) ? "nil" : str5
 
 let plus  = " + "
 let equal = " = "
