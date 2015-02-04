@@ -57,6 +57,14 @@ println("Days from \(randomDate.month).\(randomDate.day) = \(countDay + randomDa
 let optionalArray = ["5", "3c", "10", "12", "one"]
 var sumArray      = 0
 
+let opt : [Int?] = [5, 6, nil, 1, nil]
+var sum = 0
+for value in opt {
+    if let value = value {
+        sum += value
+    }
+}
+
 //optional binding
 for var i = 0; i < optionalArray.count; i++ {
     if let num = optionalArray[i].toInt() {
