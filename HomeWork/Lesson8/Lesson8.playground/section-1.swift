@@ -45,11 +45,7 @@ for char in str {
     let index = NSString(string : str).rangeOfString(String(char)).location + 1
     for i in 1...countCell {
         let key = String(char) + String(i)
-        if (index % 2) == (i % 2) {
-            dict[key] = false
-        } else {
-            dict[key] = true
-        }
+        dict[key] = (index % 2) != (i % 2)
     }
 }
 

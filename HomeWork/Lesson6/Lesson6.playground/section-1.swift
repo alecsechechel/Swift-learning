@@ -40,12 +40,12 @@ println(strConcantenet)
 /*
 Show all symbol
 */
-//var h1 = 0x1f000
-//for i in 0...2000 {
-//    let sym = UnicodeScalar(h1)
-//    print("\(h1) - \(String(Character(sym)))")
-//    h1++
-//}
+var h1 = 0x1f000
+for i in 0...2000 {
+    let sym = UnicodeScalar(h1)
+    print("\(h1) - \(String(Character(sym)))")
+    h1++
+}
 
 let one   = UnicodeScalar(128640)
 let two   = UnicodeScalar(128690)
