@@ -47,7 +47,8 @@ for i in 0...2000 {
     h1++
 }
 
-let one   = UnicodeScalar(128640)
+
+let one   = UnicodeScalar(127019)
 let two   = UnicodeScalar(128690)
 let three = UnicodeScalar(128037)
 let four  = UnicodeScalar(127886)
