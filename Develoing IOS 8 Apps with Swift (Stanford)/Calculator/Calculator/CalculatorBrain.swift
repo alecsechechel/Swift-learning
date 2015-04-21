@@ -29,14 +29,14 @@ class CalculatorBrain {
         knowOps["√"] = Op.UnaryOperation("√", sqrt)
     }
     
-    func evaluate(ops: [Op]) -> (result: Double?, ramainingOps: [Op]){
-        if 
-        return (nil, ops)
-    }
+//    func evaluate(ops: [Op]) -> (result: Double?, ramainingOps: [Op]){
+//    
+//        return (nil, ops)
+//    }
     
-    func evaluate() -> Double? {
-        
-    }
+//    func evaluate() -> Double? {
+//        
+//    }
     
     func pushOperand(operand: Double) {
         opStack.append(Op.Operand(operand))
