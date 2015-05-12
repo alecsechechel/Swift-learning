@@ -35,8 +35,5 @@ extension String {
         if count(self) > value {
             self = self[0..<value] + "..."
         }
-//        } else {
-//            self = self
-//        }
     }
 }
