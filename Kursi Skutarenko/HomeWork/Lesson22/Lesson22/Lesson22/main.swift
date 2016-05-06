@@ -123,6 +123,7 @@ if playground {
     println(mother.name)
     println(kind1.name)
     
+    father.family = family
     family.printFamily()
     father.printFamily()
     father.printMother()
