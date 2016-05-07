@@ -9,69 +9,68 @@ let constFive = "1.0"
 
 var sumIntOpt = 0
 // Optional binding
-if let constOneInt = constOne.toInt() {
+if let constOneInt = Int(constOne) {
     sumIntOpt += constOneInt
 }
-if let constTwoInt = constTwo.toInt() {
+if let constTwoInt = Int(constTwo) {
     sumIntOpt += constTwoInt
 }
-if let constThreeInt = constThree.toInt() {
+if let constThreeInt = Int(constThree) {
     sumIntOpt += constThreeInt
 }
-if let constFouthInt = constFouth.toInt() {
+if let constFouthInt = Int(constFouth) {
     sumIntOpt += constFouthInt
 }
-if let constFiveInt = constFive.toInt() {
+if let constFiveInt = Int(constFive) {
     sumIntOpt += constFiveInt
 }
 
 var sumIntFor = 0
 // Forced unwrapping
-var temp = constOne.toInt()
+var temp = Int(constOne)
 if temp != nil {
     sumIntFor += temp!
 }
-temp = constTwo.toInt()
+temp = Int(constTwo)
 if temp != nil {
     sumIntFor += temp!
 }
-temp = constThree.toInt()
+temp = Int(constThree)
 if temp != nil {
     sumIntFor += temp!
 }
-temp = constFouth.toInt()
+temp = Int(constFouth)
 if temp != nil {
     sumIntFor += temp!
 }
-temp = constFive.toInt()
+temp = Int(constFive)
 if temp != nil {
     sumIntFor += temp!
 }
 
 // Part 2
 // If var has type not optional he muss inatilization!
-var serverResponse : (statusCode: Int, message: String?, errorMessage: String?)
+var serverResponse: (statusCode: Int, message: String?, errorMessage: String?)
 serverResponse.statusCode = 201
 serverResponse.message = "Created"
 serverResponse.errorMessage = nil
 
 if serverResponse.statusCode >= 200 && serverResponse.statusCode < 300 {
-    println("Message is = \(serverResponse.message!)")
+    print("Message is = \(serverResponse.message!)")
 } else if serverResponse.errorMessage != nil {
-    println("Error message is = \(serverResponse.errorMessage!)")
+    print("Error message is = \(serverResponse.errorMessage!)")
 }
 
-var serverResponseNew : (message: String?, errorMessage: String?)
+var serverResponseNew: (message: String?, errorMessage: String?)
 serverResponseNew.errorMessage = "Method Not Allowed"
 
 if serverResponseNew.message != nil {
-    println("Message is = \(serverResponseNew.message!)")
+    print("Message is = \(serverResponseNew.message!)")
 } else if serverResponseNew.errorMessage != nil {
-    println("Error message is = \(serverResponseNew.errorMessage!)")
+    print("Error message is = \(serverResponseNew.errorMessage!)")
 }
 
 // Part 3
-println()
 var studentOne : (name: String!, numberCar: String?, note: Int?)
 var studentTwo : (name: String!, numberCar: String?, note: Int?)
 var studentThree : (name: String!, numberCar: String?, note: Int?)
@@ -96,27 +95,27 @@ studentFive.name = "Potap"
 var infoStudentOne = "My name is \(studentOne.name)."
 infoStudentOne += (studentOne.numberCar != nil) ? "\nI have car with number \"\(studentOne.numberCar!)\"." : ""
 infoStudentOne += (studentOne.note != nil) ? "\nMy result in exam is \"\(studentOne.note!)\"." : ""
-println("\(infoStudentOne)\n")
+print("\(infoStudentOne)\n")
 
 var infoStudentTwo = "My name is \(studentTwo.name)."
 infoStudentTwo += (studentTwo.numberCar != nil) ? "\nI have car with number \"\(studentTwo.numberCar!)\"." : ""
 infoStudentTwo += (studentTwo.note != nil) ? "\nMy result in exam is \"\(studentTwo.note!)\"." : ""
-println("\(infoStudentTwo)\n")
+print("\(infoStudentTwo)\n")
 
 var infoStudentThree = "My name is \(studentThree.name)."
 infoStudentThree += (studentThree.numberCar != nil) ? "\nI have car with number \"\(studentThree.numberCar!)\"." : ""
 infoStudentThree += (studentThree.note != nil) ? "\nMy result in exam is \"\(studentThree.note!)\"." : ""
-println("\(infoStudentThree)\n")
+print("\(infoStudentThree)\n")
 
 var infoStudentFour = "My name is \(studentFour.name)."
 infoStudentFour += (studentFour.numberCar != nil) ? "\nI have car with number \"\(studentFour.numberCar!)\"." : ""
 infoStudentFour += (studentFour.note != nil) ? "\nMy result in exam is \"\(studentFour.note!)\"." : ""
-println("\(infoStudentFour)\n")
+print("\(infoStudentFour)\n")
 
 var infoStudentFive = "My name is \(studentFive.name)."
 infoStudentFive += (studentFive.numberCar != nil) ? "\nI have car with number \"\(studentFive.numberCar!)\"." : ""
 infoStudentFive += (studentFive.note != nil) ? "\nMy result in exam is \"\(studentFive.note!)\"." : ""
-println("\(infoStudentFive)\n")
+print("\(infoStudentFive)\n")
 
 
 

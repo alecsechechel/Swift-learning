@@ -54,9 +54,7 @@ if (December.number % myBirthday.month) != 0 && myBirthday.month > December.numb
 }
 
 let countSeconds = countDay * 24 * 60 * 60
-println("From 01.01.\(myBirthday.year) to my birth day is \(countSeconds) seconds")
-
-
+print("From 01.01.\(myBirthday.year) to my birth day is \(countSeconds) seconds")
 
 //2 quarter
 let quarter = (myBirthday.month % 4) + 1
@@ -74,11 +72,11 @@ let sum = ((50 + varA++ + --varB + ++varC + varF++ + varD--) / varB++ + varB) % 
 var point = (x : 1, y : 4)
 
 if (point.x % 2) == 0 && (point.y % 2) == 0 {
-    println("White")
+    print("White")
 } else if (point.x % 2) != 0 && (point.y % 2) != 0 {
-    println("White")
+    print("White")
 } else {
-    println("Black")
+    print("Black")
 }
 
 

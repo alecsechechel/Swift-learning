@@ -1,6 +1,6 @@
 // Lesson 12 Enum
 
-enum Direction : String {
+enum Direction: String {
     case Left = "Left"
     case Right = "Right"
 }
@@ -21,14 +21,14 @@ var direction = Direction(rawValue: "Right")!
 action = .Turn(direction: direction)
 
 switch action {
-case .Stop: println("Stop")
+case .Stop: print("Stop")
 case .Walk(let meters) where meters < 100:
-    println("walk \(meters) metest")
+    print("walk \(meters) metest")
 case .Run(let m, let s):
-    println("run \(m) with \(s)")
-case .Turn(let dir) where dir == .Left: println("Turn Left")
-case .Turn(let dir) where dir == .Right: println("Turn Right")
+    print("run \(m) with \(s)")
+case .Turn(let dir) where dir == .Left: print("Turn Left")
+case .Turn(let dir) where dir == .Right: print("Turn Right")
 default:break
 }
 
-println(Direction.Left.rawValue)
+print(Direction.Left.rawValue)

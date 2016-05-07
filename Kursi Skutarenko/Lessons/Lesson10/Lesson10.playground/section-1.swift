@@ -1,7 +1,6 @@
 // Lesson 10 Function DRY
 
 func calculateMoney(inWallet wallet: [Int], type: Int? = nil) -> (sum:Int, count:Int) {
-    
     var sum = 0
     var count = 0
     
@@ -9,7 +8,7 @@ func calculateMoney(inWallet wallet: [Int], type: Int? = nil) -> (sum:Int, count
 
         if  (type == nil) || (value == type!) {
             sum += value
-            count++
+            count += 1
         }
     }
     
@@ -17,7 +16,6 @@ func calculateMoney(inWallet wallet: [Int], type: Int? = nil) -> (sum:Int, count
 }
 
 func calculateMoney(inSequance range: Int...) -> Int {
-    
     var sum = 0
     
     for value in range {
@@ -28,11 +26,11 @@ func calculateMoney(inSequance range: Int...) -> Int {
 }
 
 func sayHi() {
-    println("Hi")
+    print("Hi")
 }
 
 func sayPhrase(phrase: String) -> Int? {
-    println(phrase)
+    print(phrase)
     return 0
 }
 
@@ -49,7 +47,7 @@ sum.sum
 calculateMoney(inWallet: wallet, type: 100).count
 
 calculateMoney(inSequance: 5,7,100,2)
-let hi : () -> () = sayHi
+let hi: () -> () = sayHi
 hi()
 let phrase = sayPhrase
 phrase("bbb")

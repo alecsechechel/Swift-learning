@@ -1,11 +1,11 @@
 // Lesson7 array and dictionary
 
-let constArray : [String] = ["a", "b", "c", "d"]
+let constArray = ["a", "b", "c", "d"]
 
 var array = [String]()
 
 if array.isEmpty {
-    println("Array is empty")
+    print("Array is empty")
 }
 
 array += constArray // add array
@@ -24,8 +24,8 @@ array
 let money = [100, 1, 5, 20, 1, 50, 1, 1, 20, 1]
 var sum = 0
 
-for var i = 0; i < money.count; i++ {
-    println("i = \(i)")
+for i in 0..<money.count {
+    print("i = \(i)")
     sum += money[i]
 }
 sum
@@ -40,8 +40,8 @@ for i in money {
 }
 sum
 sum = 0
-for (index, value) in enumerate(money) {
-    println("index = \(index) value = \(value)")
+for (index, value) in money.enumerate() {
+    print("index = \(index) value = \(value)")
     sum += value
 }
 sum

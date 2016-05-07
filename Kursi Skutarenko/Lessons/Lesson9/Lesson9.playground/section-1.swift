@@ -3,7 +3,7 @@
 //mainLoop: for _ in 0...1000 {
 //    for i in 0..<20 {
 //        if i == 10 {
-//            println(i)
+//            print(i)
 //            break mainLoop
 //        }
 //    }
@@ -13,13 +13,13 @@
 var age = 58
 switch age {
     case 0...16:
-        println("Young")
+        print("Young")
     case 17...21:
-        println("Normal")
+        print("Normal")
     case 22...50:
-        println("Normal too")
+        print("Normal too")
     case 51, 56, 57:
-        println("hello")
+        print("hello")
     default:
         break
 }
@@ -27,9 +27,9 @@ switch age {
 var name = "Alex"
 switch name {
     case "Alex" where age < 50:
-        println(name)
+        print(name)
     case "Alex" where age >= 50:
-        println(name)
+        print(name)
     default:
         break
 }
@@ -42,11 +42,11 @@ let tuple = (name, age)
 
 switch tuple {
     case ("Alex", 60):
-        println("hi alex")
+        print("hi alex")
     case (_, let number) where number >= 65 && number <= 70:
-        println("Hi old man")
+        print("Hi old man")
     case ("Alex", _):
-        println("Alex")
+        print("Alex")
     default:
         break
 }
@@ -55,21 +55,21 @@ let point = (5, 5)
 
 switch point {
     case let (x, y) where x == y:
-        println("x == y")
+        print("x == y")
     case let (x, y) where x == -y:
-        println("x == -y")
+        print("x == -y")
     case let (_, y) where y < 0:
-        println("y < 0")
+        print("y < 0")
     default :
         break
 }
 
-let array : [Printable] = [5, 5.4, Float(5.4)]
+let array: [CustomStringConvertible] = [5, 5.4, Float(5.4)]
 
-switch array[1] {
-    case _ as Int : println("Int")
-    case _ as Double : println("Double")
-    case _ as Float : println("Float")
+switch array[2] {
+    case _ as Int : print("Int")
+    case _ as Double : print("Double")
+    case _ as Float : print("Float")
     default: break
 }
 

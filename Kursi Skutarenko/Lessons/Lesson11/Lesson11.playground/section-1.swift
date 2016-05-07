@@ -3,7 +3,6 @@
 let numbers = [4, 2, 12, 1, 89, 9, 5]
 
 func filterArray(array: [Int], f: (Int) -> Bool) -> [Int] {
-    
     var filtered = [Int]()
     for value in array {
         if f(value) {
@@ -18,20 +17,20 @@ func compare(i: Int) -> Bool {
     return i % 2 == 0
 }
 
-filterArray(numbers, compare)
+filterArray(numbers, f: compare)
 
-filterArray(numbers, {(i: Int) -> Bool in
+filterArray(numbers, f: {(i: Int) -> Bool in
     return i % 2 == 0
 })
 
-filterArray(numbers, {(i : Int) -> Bool in
+filterArray(numbers, f: {(i : Int) -> Bool in
     return i % 3 == 0 })
 
 // FIXME: aa
 // TODO: fix it
-let a = filterArray(numbers, {i in i % 2 == 0})
+let a = filterArray(numbers, f: {i in i % 2 == 0})
 a
-filterArray(numbers, {$0 % 2 == 0})
+filterArray(numbers, f: {$0 % 2 == 0})
 filterArray(numbers) {$0 % 3 == 0}
 
 let array = [1, 2, 3, 4, 5]
@@ -40,7 +39,7 @@ let a4 =
 filterArray(numbers) { value in
     
     for include in array {
-        count++
+        count += 1
         if include == value {
             return true
         }
@@ -53,12 +52,12 @@ count = 0
 var dict = [Int: Bool]()
 for value  in array {
     dict[value] = true
-    count++
+    count += 1
 }
 
 let a5 =
-filterArray(numbers, { value in
-    count++
+filterArray(numbers, f: { value in
+    count += 1
     return dict[value] != nil
 })
 count
